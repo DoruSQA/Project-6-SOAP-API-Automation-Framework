@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:tns="http://demo.totalshiftleft.ai/soap"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <soap:Body>
+        <tns:UpdateUserRequest>
+            <id>${id}</id>
+            <name>${name}</name>
+            <email>${email}</email>
+            <age>${age}</age>
+        </tns:UpdateUserRequest>
+    </soap:Body>
+</soap:Envelope>

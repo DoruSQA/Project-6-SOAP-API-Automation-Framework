@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+               xmlns:tns="http://demo.totalshiftleft.ai/soap"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <tns:CreateProductRequest>
+      <name>${name}</name>
+      <price>${price}</price>
+      <description>Demo product via SOAP</description>
+      <stock>${stock}</stock>
+      <!-- <name xsi:nil="true"/> -->
+    </tns:CreateProductRequest>
+  </soap:Body>
+</soap:Envelope>

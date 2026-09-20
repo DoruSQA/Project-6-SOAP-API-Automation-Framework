@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap_version:Envelope xmlns:soap_version="http://schemas.xmlsoap.org/soap/envelope/" 
+               xmlns:app="http://demo.totalshiftleft.ai/soap"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  <!-- namespace for null value -->
+  <soap_version:Body>
+    <app:CreateUserRequest>
+      <name>${name}</name>
+      <email>${email}</email>
+      <age>${age}</age>
+    </app:CreateUserRequest>
+  </soap_version:Body>
+</soap_version:Envelope>
