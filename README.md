@@ -48,10 +48,10 @@ Both positive and negative scenarios are automated, including validation and bou
 
 ## ✨ Framework Features
 
-- **Template Parameterization:** Runtime test data for dynamic request payloads
-- **XML Response Deserialization:** XML response parsing using `fast-xml-parser`
 - **Modular API Architecture:** Structured API services implemented with Playwright
 - **Custom Playwright Fixtures:** Reusable request payloads through custom fixtures
+- **Template Parameterization:** Runtime test data for dynamic request payloads
+- **XML Response Deserialization:** XML response parsing using `fast-xml-parser`
 - **Test Reporting:** Detailed reports using Playwright's built-in reporting
 - **Logging:** Structured logging using Playwright's built-in capabilities
 - Test execution control through **Playwright parameters**
