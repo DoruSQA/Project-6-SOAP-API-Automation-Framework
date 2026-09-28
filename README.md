@@ -1,9 +1,11 @@
+<a id="top"></a>
 # 🎭 Project 6 – SOAP API Automation Framework (ShiftLeft-API)
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES2022%2B-yellow)
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
 ![Playwright](https://img.shields.io/badge/Playwright-API%20Testing-2EAD33)
 ![SOAP](https://img.shields.io/badge/SOAP-API%20Testing-005571)
+![CI](https://github.com/DoruSQA/Project-6-SOAP-API-Automation-Framework/actions/workflows/manual-module-testing.yml/badge.svg)
 
 > **Note:** This project is part of my personal QA Automation portfolio.
 
@@ -14,9 +16,10 @@
 - [Framework Features](#framework-features)
 - [Framework Architecture](#framework-architecture)
 - [Test Execution](#test-execution)
-- [Framework Requirements](#framework-requirements)
+- [Reports and Logging](#reports-and-logging)
 - [Conclusion](#conclusion)
 
+---
 
 ## 📖 Overview
 
@@ -27,6 +30,7 @@ The framework covers CRUD operations for the following SOAP services:
 
 Both positive and negative scenarios are automated, including validation and boundary testing.
 
+---
 
 <a id="tech-stack"></a>
 ## 🛠️ Tech Stack
@@ -40,16 +44,22 @@ Both positive and negative scenarios are automated, including validation and bou
 | SOAP | API protocol under test |
 | XML | Request payload templates and response format |
 
+---
+
 ## ✨ Framework Features
 
-- Template parametrization with runtime test data
-- HTML test reporting with Playwright
-- XML response deserialization using `fast-xml-parser`
-- Separation of request data from test logic
-- Service Object Model for reusable API operations
-- Test execution control through Playwright parameters
-- Custom Playwright Fixtures used as request payload
-- Centralized HTTP status codes and expected response values
+- **Template Parameterization:** Runtime test data for dynamic request payloads
+- **XML Response Deserialization:** XML response parsing using `fast-xml-parser`
+- **Request Data Separation:** Test data separated from test logic
+- **Modular API Architecture:** Structured API services implemented with Playwright
+- **Test Execution Control:** Test execution managed through Playwright parameters
+- **Custom Playwright Fixtures:** Reusable request payloads through custom fixtures
+- **Centralized Validation:** Centralized HTTP status codes and expected response values
+- **Test Reporting:** Detailed reports using Playwright's built-in reporting
+- **Logging:** Structured logging using Playwright's built-in capabilities
+- **GitHub Actions CI:** Two workflows for automated test execution — one manually triggered and one triggered on Pull Requests
+
+---
 
 <a id="framework-architecture"></a>
 ## 🏗️ Framework Architecture
@@ -68,44 +78,63 @@ maintainability, reusability, and separation of concerns.
 | Tests | Contains test scenarios organized by API resource and operation |
 | Utils | Provides generic methods for XML parsing, placeholder replacement and XML field manipulation |
 
-## ▶️ Test Execution
+---
 
-### Smoke Suite
+## Test Execution
+
+### Run All Tests
 
 ```bash
+# All Tests (43 tests)
+npx playwright test
+```
+
+### Run Specific Test Suite 
+
+```bash
+# Smoke Tests (8 tests)
 npx playwright test --grep '@smoke'
-```
-- Executes all the tests with 'Smoke' tag
 
-### Regression Suite
-
-```bash
-npx playwright test --grep '@regression'
-```
-- Executes all API tests with 'Regression' tag
-
-
-### Service Suite
-
-```bash
+# Test Module: Banking Account (6 tests) 
 npx playwright test --grep '@product'
 ```
-- Executes all API tests with 'Product' tag
-
 
 ---
 
-## ⚙️ Framework Requirements
-- Node.js (LTS)
-- npm
-- Playwright
-- JavaScript (ES Modules)
+## Reports and Logging
 
+### Reports
 
-## 🎯 Conclusion
+Test execution reports are generated using Playwright's built-in HTML reporter and located in the `report/` directory.
+
+<details>
+<summary>📊 <strong>Report Preview</strong></summary>
+
+<br>
+
+![Playwright Report](docs/report-preview.jpg)
+
+</details>
+
+### Logs
+
+Execution logs are generated using Playwright's built-in logging capabilities.
+
+<details>
+<summary>📝 <strong>Logs Preview</strong></summary>
+
+<br>
+
+![Logs Preview](docs/logs-preview.jpg)
+
+</details>
+
+---
+
+## Conclusion
 
 The main focus of this project was to demonstrate a solid understanding of core API Automation concepts, particularly 
 SOAP API testing, and their practical application within a structured and configurable framework.
 
-
 **Author:** [DoruSQA](https://github.com/DoruSQA) | [LinkedIn](https://www.linkedin.com/in/sava-doru/)
+<p align="right"><a href="#top">Back to Top</a></p>
