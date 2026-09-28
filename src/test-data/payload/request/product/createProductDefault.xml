@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+               xmlns:tns="http://demo.totalshiftleft.ai/soap"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <tns:CreateProductRequest>
+      <name>Laptop ASUS</name>
+      <price>50</price>
+      <description>Demo Laptop product via SOAP</description>
+      <stock>25</stock>
+      <category>electronics</category>
+      <!-- <name xsi:nil="true"/> -->
+    </tns:CreateProductRequest>
+  </soap:Body>
+</soap:Envelope>
