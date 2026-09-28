@@ -18,14 +18,18 @@ jobs:
         with:
           node-version: '20'
           cache: npm
+          cache-dependency-path: src/package-lock.json
 
       - name: Install dependencies
+        working-directory: src
         run: npm ci
 
       - name: Install Playwright browsers
+        working-directory: src
         run: npx playwright install --with-deps
 
       - name: Run Smoke Tests
+        working-directory: src
         run: npx playwright test --grep "@smoke"
 
       - name: Upload Playwright Report
@@ -33,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report-smoke
-          path: report/
+          path: src/report/
           if-no-files-found: warn
