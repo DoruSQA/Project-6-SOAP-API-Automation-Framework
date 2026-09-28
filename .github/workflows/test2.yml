@@ -1,0 +1,49 @@
+name: Playwright Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      testSuite:
+        description: 'Select the test suite to execute'
+        required: true
+        type: choice
+        options:
+          - smoke
+          - regression
+          - user
+          - product
+
+jobs:
+  playwright-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: src/package-lock.json
+
+      - name: Install dependencies
+        working-directory: src
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: src
+        run: npx playwright install --with-deps
+
+      - name: Run ${{ inputs.testSuite }} tests
+        working-directory: src
+        run: npx playwright test --grep "@${{ inputs.testSuite }}"
+
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ inputs.testSuite }}
+          path: src/report/
+          if-no-files-found: warn
