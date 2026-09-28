@@ -50,13 +50,11 @@ Both positive and negative scenarios are automated, including validation and bou
 
 - **Template Parameterization:** Runtime test data for dynamic request payloads
 - **XML Response Deserialization:** XML response parsing using `fast-xml-parser`
-- **Request Data Separation:** Test data separated from test logic
 - **Modular API Architecture:** Structured API services implemented with Playwright
-- **Test Execution Control:** Test execution managed through Playwright parameters
 - **Custom Playwright Fixtures:** Reusable request payloads through custom fixtures
-- **Centralized Validation:** Centralized HTTP status codes and expected response values
 - **Test Reporting:** Detailed reports using Playwright's built-in reporting
 - **Logging:** Structured logging using Playwright's built-in capabilities
+- Test execution control through **Playwright parameters**
 - **GitHub Actions CI:** Two workflows for automated test execution — one manually triggered and one triggered on Pull Requests
 
 ---
@@ -85,7 +83,7 @@ maintainability, reusability, and separation of concerns.
 ### Run All Tests
 
 ```bash
-# All Tests (43 tests)
+# All Tests (40 tests)
 npx playwright test
 ```
 
@@ -95,7 +93,7 @@ npx playwright test
 # Smoke Tests (8 tests)
 npx playwright test --grep '@smoke'
 
-# Test Module: Banking Account (6 tests) 
+# Test Service: Product service (20 tests) 
 npx playwright test --grep '@product'
 ```
 
@@ -112,7 +110,7 @@ Test execution reports are generated using Playwright's built-in HTML reporter a
 
 <br>
 
-![Playwright Report](docs/report-preview.jpg)
+![Playwright Report](docs/report-preview.png)
 
 </details>
 
