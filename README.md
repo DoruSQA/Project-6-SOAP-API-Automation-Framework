@@ -23,8 +23,8 @@
 
 ## 📖 Overview
 
-A modular SOAP API automation framework built with JavaScript, Node.js, and Playwright.
-The framework covers CRUD operations for the following SOAP services:
+A modular SOAP API automation framework built with **JavaScript,** **Node.js,** and **Playwright.**
+The framework covers CRUD operations for the following **SOAP services:**
 - Users
 - Products
 
@@ -103,27 +103,27 @@ npx playwright test --grep '@product'
 
 ### Reports
 
-Test execution reports are generated using Playwright's built-in HTML reporter and located in the `report/` directory.
+Test execution reports are generated using Extent Reports and located in the `reports/` directory.
 
 <details>
 <summary>📊 <strong>Report Preview</strong></summary>
 
 <br>
 
-![Playwright Report](docs/report-preview.png)
+![Extent Report](docs/report-preview.jpg)
 
 </details>
 
 ### Logs
 
-Execution logs are generated using Playwright's built-in logging capabilities.
+Execution logs are generated using Logback and SLF4J and located in the `logs/` directory.
 
 <details>
 <summary>📝 <strong>Logs Preview</strong></summary>
 
 <br>
 
-![Logs Preview](docs/logs-preview.jpg)
+![Logs Preview](docs/loggs-preview.png)
 
 </details>
 
