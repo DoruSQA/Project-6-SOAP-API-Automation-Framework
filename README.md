@@ -110,7 +110,7 @@ Test execution reports are generated using Extent Reports and located in the `re
 
 <br>
 
-![Extent Report](docs/report-preview.jpg)
+![Extent Report](docs/report-preview.png)
 
 </details>
 
@@ -123,7 +123,7 @@ Execution logs are generated using Logback and SLF4J and located in the `logs/` 
 
 <br>
 
-![Logs Preview](docs/loggs-preview.png)
+![Logs Preview](docs/loggs-preview.jpg)
 
 </details>
 
