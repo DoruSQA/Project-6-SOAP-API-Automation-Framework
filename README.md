@@ -105,7 +105,7 @@ npx playwright test --grep '@product'
 
 ### Reports
 
-Test execution reports are generated using Extent Reports and located in the `reports/` directory.
+Test execution reports are generated using Playwright built-in reports and located in the `reports/` directory.
 
 <details>
 <summary>📊 <strong>Report Preview</strong></summary>
@@ -118,7 +118,7 @@ Test execution reports are generated using Extent Reports and located in the `re
 
 ### Logs
 
-Execution logs are generated using Logback and SLF4J and located in the `logs/` directory.
+Execution logs are generated using Playwright built-in logs and located in the `logs/` directory.
 
 <details>
 <summary>📝 <strong>Logs Preview</strong></summary>
